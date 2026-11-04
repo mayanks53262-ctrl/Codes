@@ -13,6 +13,15 @@ class Solution {
             med=nums[odd-1];
         }
         for(int i=0;i<nums.length;i++){
+        //    while(nums[i]<med||nums[i]>med){
+        //        if(nums[i]<med){
+        //                    nums[i]+=1;
+        //            count +=1;
+        //        }
+        //    else if(nums[i]>med){
+        //        nums[i]-=1;
+         //       count +=1;
+        //    }
             count += Math.abs(nums[i]-med);
             }
         
