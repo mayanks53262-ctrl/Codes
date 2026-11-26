@@ -2,18 +2,27 @@
 class Solution {
     public boolean canAliceWin(int n) {
         int a = n;
-        boolean alice = true;
 
-        for (int i = 10; i >= 1; i--) {
-            if (a < i) {
-                return !alice;
+        for (int i = 10; i >= 1; i = i - 2) {
+            if (a >= i) {
+                a = a - i;
+            } 
+            else {
+                return false;
             }
 
-            a = a - i;
-            alice = !alice;
+            if (i == 2) {
+                return true;
+            }
+
+            if (a < i - 1) {
+                return true;
+            }
+
+            a = a - (i - 1);
         }
 
-        return !alice;
+        return true;
     }
 }
 
